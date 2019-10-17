@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* perspective: 1000px; */
 }
 
 .clock {
@@ -51,6 +52,8 @@
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  transition: transform 0.5s, width 0.5s;
+  /* transition: width 0.5s; */
 }
 
 .segment:nth-child(1) {
@@ -88,6 +91,31 @@
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
+
+.segment.off:nth-child(1) {
+  transform: rotateY(90deg) rotateX(-90deg);
+}
+.segment.off:nth-child(2) {
+  transform: rotateY(90deg);
+}
+.segment.off:nth-child(3) {
+  transform: rotateY(90deg);
+}
+.segment.off:nth-child(4) {
+  transform: rotateY(90deg) rotateX(-90deg);
+}
+.segment.off:nth-child(5) {
+  transform: rotateY(270deg);
+}
+.segment.off:nth-child(6) {
+  transform: rotateY(270deg);
+}
+.segment.off:nth-child(7) {
+  width: 0;
+}
+
+
 
 
 @media(max-width: 915px){
